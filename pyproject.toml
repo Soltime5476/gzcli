@@ -1,7 +1,7 @@
 [project]
 name = "gzcli"
 version = "0.1.0"
-description = "A CLI built for interacting with [GZ::CTF](https://gzctf.gzti.me/) and its server API."
+description = "A CLI built for interacting with GZ::CTF and its server API."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
