@@ -1,0 +1,39 @@
+# GZCTF CLI
+
+A CLI built for interacting with [GZ::CTF](https://gzctf.gzti.me/) and its server API.
+
+## Getting Started
+### Since the tool is still in development phase, no built package is released yet.
+
+### 1. Clone the repository
+```sh
+git clone https://github.com/Soltime5476/gzcli.git
+```
+
+### 2. Install the package into your python environment
+The easiest way to do so is with [uv](https://github.com/astral-sh/uv) installed, simply run   
+```sh
+cd gzcli
+uv sync
+``` 
+and uv will create a virtual environment with all dependencies installed.
+
+## Example Usages
+
+### login to GZ::CTF remote server
+```sh
+gz login --url [remote url] --username [username] --password [password]
+```
+
+### push a challenge to the remote server
+```
+gz game push-challenge --game-id [game id] [challenge_directory]
+```
+this command requires a `challenge.yaml` containing the challenge spec to be present in the challenge directory, see [writing a challenge spec](docs/challenge_spec.md) for documentations on writing a challenge spec.
+
+## TODO List
+- Implement challenge state tracking for synchorizing remote server status, current implementation will create challenges with duplicate names if called repeatedly
+- Complete all API endpoints and data models
+- Add team registration and account creation commands
+- Improve help texts and documentations
+- Fancy stuff like colours and progess bars

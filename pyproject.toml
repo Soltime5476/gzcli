@@ -1,0 +1,19 @@
+[project]
+name = "gzcli"
+version = "0.1.0"
+description = "A CLI built for interacting with [GZ::CTF](https://gzctf.gzti.me/) and its server API."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "click>=8.4.1",
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+gz = "gzcli.cli.entrypoint:gz"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
