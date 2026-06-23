@@ -27,13 +27,13 @@ gz login --url [remote url] --username [username] --password [password]
 
 ### push a challenge to the remote server
 ```
-gz game push-challenge --game-id [game id] [challenge_directory]
+gz game push-challenge --game-id [game_id] [challenge_directory]
 ```
-this command requires a `challenge.yaml` containing the challenge spec to be present in the challenge directory, see [writing a challenge spec](docs/challenge_spec.md) for documentations on writing a challenge spec.
+this command requires a `challenge.yaml` containing the challenge spec to be present in the challenge directory, see [writing a challenge spec](docs/challenge_spec.md) for documentations on writing a challenge spec (TODO).
 
 ## TODO List
 - Implement challenge state tracking for synchorizing remote server status, current implementation will create challenges with duplicate names if called repeatedly
 - Complete all API endpoints and data models
 - Add team registration and account creation commands
 - Improve help texts and documentations
-- Fancy stuff like colours and progess bars
+- Fancy stuff (coloured text, progress bars, autocompletions...)

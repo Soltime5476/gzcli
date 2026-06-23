@@ -13,14 +13,14 @@ from gzcli.api.edit import (
     update_challenge_attachments,
     add_challenge_flags,
 )
-from gzcli.api.models.requests.edit import (
+from gzcli.api.models.edit import (
     ChallengeInfoModel,
     ChallengeUpdateModel,
     AttachmentCreateModel,
     FlagCreateModel,
 )
 
-require_game_id = click.option("-g", "--game_id", type=int, required=True)
+require_game_id = click.option("-g", "--game-id", "game_id", type=int, required=True)
 
 
 def _parse_challenge_spec(spec_fp: Path):
@@ -112,7 +112,7 @@ def push_challenge(game_id: int, challenge_path: Path, profile: APIProfile):
             ).hexdigest()
             update_attachment_body.fileHash = file_hash
         elif challenge_attachment.type == "Remote":
-            update_attachment_body.url = challenge_attachment.path
+            update_attachment_body.remoteUrl = challenge_attachment.path
         update_challenge_attachments(
             profile, game_id, challenge_id, update_attachment_body
         )
