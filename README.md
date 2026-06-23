@@ -27,9 +27,9 @@ gz login --url [remote url] --username [username] --password [password]
 
 ### push a challenge to the remote server
 ```
-gz game push-challenge --game-id [game id] [challenge_directory]
+gz game push-challenge --game-id [game_id] [challenge_directory]
 ```
-this command requires a `challenge.yaml` containing the challenge spec to be present in the challenge directory, see [writing a challenge spec](docs/challenge_spec.md) for documentations on writing a challenge spec.
+this command requires a `challenge.yaml` containing the challenge spec to be present in the challenge directory, see [writing a challenge spec](docs/challenge_spec.md) for documentations on writing a challenge spec (TODO).
 
 ### register (create) a team on the remote server
 ```sh
@@ -42,4 +42,4 @@ you must be logged in first (see `gz login`), and each user account can only own
 - Complete all API endpoints and data models
 - Add account creation command
 - Improve help texts and documentations
-- Fancy stuff like colours and progess bars
+- Fancy stuff (coloured text, progress bars, autocompletions...)
