@@ -24,7 +24,7 @@ class APIProfile:
 
 
 def make_get(profile: APIProfile, rel_path: str, **kwargs):
-    r = profile.session.get(url=profile.make_endpoint(rel_path) ** kwargs)
+    r = profile.session.get(url=profile.make_endpoint(rel_path), **kwargs)
     r.raise_for_status()
     return r
 

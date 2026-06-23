@@ -1,7 +1,7 @@
 """Defines the data models used interally by the gzctf cli"""
 
 from typing import Optional
-from gzcli.api.models.requests.edit import (
+from gzcli.api.models.edit import (
     ChallengeCategory,
     ChallengeType,
     ChallengeNetworkMode,

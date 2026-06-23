@@ -8,7 +8,7 @@ from gzcli.cli.auth import (
 )
 from gzcli.cli.config import PROFILES_PATH
 from gzcli.api._http import APIProfile, make_post
-from gzcli.api.models.requests.edit import ChallengeCategory, ChallengeType
+from gzcli.api.models.enum import ChallengeCategory, ChallengeType
 
 
 @click.group()

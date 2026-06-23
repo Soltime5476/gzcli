@@ -1,5 +1,5 @@
 from gzcli.api._http import APIProfile, make_post, make_put
-from gzcli.api.models.requests.edit import (
+from gzcli.api.models.edit import (
     ChallengeInfoModel,
     AttachmentCreateModel,
     ChallengeUpdateModel,
